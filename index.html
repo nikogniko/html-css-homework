@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
     <!-- normalizer -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,21 +22,30 @@
 
             <nav>
                 <ul class="flex-list">
-                    <li class="list-item">
-                        <a class="nav-link current" href="./index.html">Студія</a>
+                    <li class="nav-list-item current">
+                        <a class="nav-link" href="./index.html">Студія</a>
                     </li>
-                    <li class="list-item">
+                    <li class="nav-list-item">
                         <a class="nav-link" href="./portfolio.html">Портфоліо</a>
                     </li>
-                    <li class="list-item">
+                    <li class="nav-list-item">
                         <a class="nav-link" href="">Контакти</a>
                     </li>
                 </ul>
             </nav>
             
             <div class="header-contacts">
-                <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                <a class="contacts" href="tel:+380961111111"> +38 096 111 11 11</a>
+                <a class="contacts" href="mailto:info@devstudio.com">
+                    <svg class="contacts-icon" width="16" height="12">
+                        <use href="./images/icons.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com</a>
+
+                <a class="contacts" href="tel:+380961111111"> 
+                    <svg class="contacts-icon" width="10" height="16">
+                        <use href="./images/icons.svg#icon-smartphone"></use>
+                    </svg>
+                    +38 096 111 11 11</a>
             </div>
             
         </div>
@@ -56,23 +65,47 @@
         
         <!-- Features -->
         <section class="container">
-            <h2 class="features-section-title">Особливості</h2>
+            <h2 class="visually-hidden">Особливості</h2>
 
             <ul class="flex-list features">
                 <li class="features-item">
-                    <h3 class="features-title">УВАГА ДО ДЕТАЛЕЙ</h3>
+                    <div class="icon-box">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-antenna"></use>
+                        </svg>
+                    </div>
+
+                    <h3 class="primary-uppercase-title">Увага до деталей</h3>
                     <p class="features-text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
                 </li>
                 <li class="features-item">
-                    <h3 class="features-title">ПУНКТУАЛЬНІСТЬ</h3>
+                    <div class="icon-box">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-clock"></use>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="primary-uppercase-title">Пунктуальність</h3>
                     <p class="features-text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
                 </li>
                 <li class="features-item">
-                    <h3 class="features-title">ПЛАНУВАННЯ</h3>
+                    <div class="icon-box">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-diagram"></use>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="primary-uppercase-title">Планування</h3>
                     <p class="features-text">Так само консультація з широким активом значною мірою зумовлює.</p>
                 </li>
                 <li class="features-item">
-                    <h3 class="features-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                    <div class="icon-box">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-astronaut"></use>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="primary-uppercase-title">Сучасні технології</h3>
                     <p class="features-text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
                 </li>
             </ul>
@@ -95,31 +128,155 @@
 
                 <ul class="flex-list">
                     <li class="team-flex-card">
-                        <img src="./images/studio-page/photo-1.jpg" alt="Ігор Дем'яненко" width="100%">
+                        <img src="./images/studio-page/photo-1.jpg" alt="Ігор Дем'яненко">
                         <div class="team-flex-card-description">
                             <h3 class="team-member name">Ігор Дем'яненко</h3>
                             <p class="team-member">Product Designer</p>
+
+                            <ul class="flex-list social-networks">
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Інстаграм">
+                                       <svg class="social-network-icon" >
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg> 
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Твіттер">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Фейсбук">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Лінкедин">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="team-flex-card">
-                        <img src="./images/studio-page/photo-2.jpg" alt="Ольга Рєпіна" width="100%">
+                        <img src="./images/studio-page/photo-2.jpg" alt="Ольга Рєпіна">
                         <div class="team-flex-card-description">
                             <h3 class="team-member name">Ольга Рєпіна</h3>
                             <p class="team-member">Frontend Developer</p>
+
+                            <ul class="flex-list social-networks">
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Інстаграм">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Твіттер">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Фейсбук">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Лінкедин">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="team-flex-card">
-                        <img src="./images/studio-page/photo-3.jpg" alt="Микола Тарасов" width="100%">
+                        <img src="./images/studio-page/photo-3.jpg" alt="Микола Тарасов">
                         <div class="team-flex-card-description">
                             <h3 class="team-member name">Микола Тарасов</h3>
                             <p class="team-member">Marketing</p>
+
+                            <ul class="flex-list social-networks">
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Інстаграм">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Твіттер">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Фейсбук">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Лінкедин">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="team-flex-card">
-                        <img src="./images/studio-page/photo-4.jpg" alt="Михайло Єрмаков" width="100%">
+                        <img src="./images/studio-page/photo-4.jpg" alt="Михайло Єрмаков">
                         <div class="team-flex-card-description">
                             <h3 class="team-member name">Михайло Єрмаков</h3>
                             <p class="team-member">UI Designer</p>
+
+                            <ul class="flex-list social-networks">
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Інстаграм">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Твіттер">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Фейсбук">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./" class="social-network" aria-label="Посилання на Лінкедин">
+                                        <svg class="social-network-icon">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -127,17 +284,108 @@
         </div>
     </main>
     
+    <!-- Regular clients -->
+    <section class="container clients">
+        <h2 class="section-title">Постійні клієнти</h2>
+        <ul class="flex-list">
+            <li>
+                <a class="client" href="./">
+                    <svg class="client-icon">
+                        <use href="./images/icons.svg#icon-company-1"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="client" href="./">
+                    <svg class="client-icon">
+                        <use href="./images/icons.svg#icon-company-2"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="client" href="./">
+                    <svg class="client-icon">
+                        <use href="./images/icons.svg#icon-company-3"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="client" href="./">
+                    <svg class="client-icon">
+                        <use href="./images/icons.svg#icon-company-4"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="client" href="./">
+                    <svg class="client-icon">
+                        <use href="./images/icons.svg#icon-company-5"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="client" href="./">
+                    <svg class="client-icon">
+                        <use href="./images/icons.svg#icon-company-6"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </section>
+
     <!-- Footer -->
     
     <div class="footer-section-bg">
         <footer class="container footer">
-           <a class="logo" href="./index.html"><span class="logo-piece">Web</span>Studio</a>
+           <div>
+                <a class="logo" href="./index.html"><span class="logo-piece">Web</span>Studio</a>
                 
-            <address class="address">
-                м. Київ, пр-т Лесі Українки, 26 <br>
-                <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a> <br>
-                <a class="contacts" href="tel:+380961111111"> +38 096 111 11 11</a>
-            </address>
+                <address class="address">
+                    м. Київ, пр-т Лесі Українки, 26 <br>
+                    <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a> <br>
+                    <a class="contacts" href="tel:+380961111111"> +38 096 111 11 11</a>
+                </address>
+           </div>
+
+            <div class="join">
+                <h3 class="primary-uppercase-title">Приєднуйтесь</h3>
+                
+                <ul class="flex-list social-networks">
+                    <li>
+                        <a href="./" class="social-network" aria-label="Посилання на Інстаграм">
+                            <svg class="social-network-icon">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./" class="social-network" aria-label="Посилання на Твіттер">
+                            <svg class="social-network-icon">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./" class="social-network" aria-label="Посилання на Фейсбук">
+                            <svg class="social-network-icon">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./" class="social-network" aria-label="Посилання на Лінкедин">
+                            <svg class="social-network-icon">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sign-up">
+                <h3 class="primary-uppercase-title">Підпишіться на розсилку</h3>
+                <button class="button primary">Підписатися</button>
+            </div>
         </footer>
     </div>
 </body>
