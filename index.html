@@ -357,7 +357,7 @@
            </div>
 
             <div class="join">
-                <h3 class="primary-uppercase-title">Приєднуйтесь</h3>
+                <p class="primary-uppercase-title">Приєднуйтесь</p>
                 
                 <ul class="flex-list social-networks">
                     <li>
@@ -391,14 +391,20 @@
                 </ul>
             </div>
 
-            <div class="sign-up">
-                <h3 class="primary-uppercase-title">Підпишіться на розсилку</h3>
-                <button class="button primary">Підписатися 
-                    <svg class="icon-sign-up">
-                        <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
-                </button>
-            </div>
+            <form class="sign-up js-sreaker-form">
+                <p class="primary-uppercase-title">Підпишіться на розсилку</p>
+                
+                <div class="sign-up-block">
+                    <input type="email" name="email" class="email-input" placeholder="E-mail">
+
+                    <button class="button primary" type="submit">
+                        Підписатися
+                        <svg class="icon-sign-up">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </footer>
     </div>
 
@@ -410,17 +416,74 @@
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
+
+            <form class="form js-sreaker-form">
+                <p class="form-caption">Залиште свої дані, ми вам передзвонимо</p>
+                
+                <label class="form-field">
+                    Ім'я
+                    <input type="text" name="name" class="form-input">
+                    <svg class="form-icon">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
+                </label>
+                
+                <label class="form-field">
+                    Телефон
+                    <input type="tel" name="tel" class="form-input">
+                    <svg class="form-icon">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                </label>
+
+                <label class="form-field">
+                    Пошта
+                    <input type="email" name="email" class="form-input">
+                    <svg class="form-icon">
+                        <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
+                </label>
+                
+
+                <label class="form-field">
+                    Коментар
+                    <textarea name="comment" class="form-input comment" 
+                    placeholder="Введіть текст"></textarea>
+                </label>
+
+                <label class="form-checkbox">
+                    <input type="checkbox" name="policy" class="visually-hidden checkbox"
+                    value="accept">
+                    <svg class="checkbox-icon">
+                        <use class="icon-check-on" href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                    <span class="checkbox-text">Погоджуюся з розсилкою та приймаю 
+                        <a href="./">Умови договору</a>
+                    </span>
+                </label>
+
+                <div class="centered">
+                    <button type="submit" class="button primary">Відправити</button> 
+                </div>
+            </form>
         </div>
     </div>
 
+    <script src="./js/modal.js"></script>
 
     <script>
-        const{height: pageHeaderHeight} = 
-        document.querySelector(".header").getBoundingClientRect();
+        (()=>{
+            document
+            .querySelector('.js-sreaker-form')
+            .addEventListener('submit', e => {
+                e.preventDefault();
 
-        document.body.style.paddingTop = `${pageHeaderHeight}px`;
+                new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+                );
+            });
+        })();
     </script>
 
-    <script src="./js/modal.js"></script>
 </body>
 </html>
