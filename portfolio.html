@@ -209,7 +209,7 @@
                 <a class="logo" href="./index.html"><span class="logo-piece">Web</span>Studio</a>
     
                 <address class="address">
-                    м. Київ, пр-т Лесі Українки, 26 
+                    м. Київ, пр-т Лесі Українки, 26
                     <a class="contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
                     <a class="contacts" href="tel:+380961111111"> +38 096 111 11 11</a>
                 </address>
@@ -249,14 +249,22 @@
                     </li>
                 </ul>
             </div>
+
+            <form class="sign-up js-sreaker-form">
+                <p class="primary-uppercase-title">Підпишіться на розсилку</p>
+            
+                <div class="sign-up-block">
+                    <input type="email" name="email" class="email-input" placeholder="E-mail">
+            
+                    <button class="button primary" type="submit">
+                        Підписатися
+                        <svg class="icon-sign-up">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </footer>
     </div>
-
-     <script>
-        const{height: pageHeaderHeight} = 
-        document.querySelector(".header").getBoundingClientRect();
-
-        document.body.style.paddingTop = `${pageHeaderHeight}px`;
-    </script>
 </body>
 </html>
