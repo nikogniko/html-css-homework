@@ -1,0 +1,7 @@
+@mixin flexContainer($vertical-align: center,
+        $horizontal-align: flex-start){
+
+    display: flex;
+    align-items: $vertical-align;
+    justify-content: $horizontal-align;
+}

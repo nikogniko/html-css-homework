@@ -1,0 +1,54 @@
+/* PLACEHOLDERS */
+
+%contacts {
+    color: getColor('primary-text');
+    fill: getColor('primary-text');
+
+    vertical-align: middle;
+
+    transition: color 250ms $primary-transition-timing-function;
+}
+
+%button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 187%;
+    letter-spacing: 0.06em;
+    text-align: center;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+/* CLASSES HELPERS */
+
+/* Hides elements */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.flex-list {
+    list-style: none;
+
+    display: flex;
+
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.centered {
+    text-align: center;
+}

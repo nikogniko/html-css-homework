@@ -1,0 +1,77 @@
+/* button styles */
+
+.primary-button {
+    @extend %button;
+
+    color: getColor('white');
+    background-color: getColor('accent');
+    border-color: getColor('accent');
+
+    min-width: 200px;
+    min-height: 50px;
+
+    transition: background-color 100ms $primary-transition-timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: getColor('button-active');
+    }
+}
+
+.hero .primary-button {
+    min-width: 216px;
+}
+
+.form .primary-button {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.sign-up-block .primary-button {
+    @include flexContainer(center, center);
+
+    min-width: 200px;
+}
+
+/* BUTTONS FOR PORTFOLIO */
+
+.category-button {
+    @extend %button;
+
+    color: getColor('title');
+
+    background-color: getColor('additional');
+    border-color: getColor('additional');
+
+    box-shadow: none;
+    border: none;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+
+    transition: color 250ms $primary-transition-timing-function,
+        background-color 250ms $primary-transition-timing-function,
+        box-shadow 250ms $primary-transition-timing-function;
+
+
+    &.selected,
+    &:hover,
+    &:focus {
+        color: getColor('white');
+        background-color: getColor('accent');
+
+        border-radius: 4px;
+        border: getColor('accent');
+
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+            0 1px 2px 0 rgba(0, 0, 0, 0.08),
+            0 3px 1px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+.filters-item:not(:last-child) {
+    margin-right: 8px;
+}

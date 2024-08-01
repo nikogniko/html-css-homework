@@ -1,0 +1,28 @@
+body {
+    background-color: getColor('white');
+    color: getColor('primary-text');
+
+    font-family: $primary-font-family;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+    color: getColor('title');
+    font-weight: 700;
+    margin-top: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}

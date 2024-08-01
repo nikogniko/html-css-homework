@@ -1,0 +1,17 @@
+$color:(
+    'title': #212121,
+    'primary-text': #757575,
+    'accent': #2196F3,
+    'button-active': #188CE8,
+    'additional': #F5F4FA,
+    'additional-bg': #2F303A,
+    'white': #FFFFFF,
+    'primary-footer-text': rgba(255, 255, 255, 0.6),
+    'icons-primary': #AFB1B8
+);
+
+$primary-font-family: "Roboto", sans-serif;
+$logo-font-family: "Raleway", sans-serif;
+
+$primary-transition-timing-function: 
+cubic-bezier(0.4, 0, 0.2, 1);

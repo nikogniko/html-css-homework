@@ -1,0 +1,148 @@
+/* Animation */
+
+@keyframes currentPage {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* FOR IMAGES */
+
+.specialization-type-item,
+.team-flex-card,
+.flex-card {
+    img {
+        width: 100%;
+    }
+}
+
+/* Logo */
+
+.logo {
+    color: getColor('title');
+    font-family: $logo-font-family;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+
+    margin-right: 93px;
+}
+
+.logo-piece {
+    color: getColor('accent');
+}
+
+/* Contacts */
+
+.contacts {
+    @extend %contacts;
+
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+        fill: getColor('accent');
+    }
+}
+
+.contacts-icon {
+    @extend %contacts;
+
+    fill: inherit;
+
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+/* Sections */
+
+.section-title {
+    font-size: 36px;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+/* Main Container */
+
+.container {
+    max-width: 1200px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    margin-bottom: 94px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.team,
+    &.clients {
+        padding-top: 94px;
+        padding-bottom: 94px;
+
+        margin-bottom: 0;
+    }
+}
+
+/* TITLES */
+
+.primary-uppercase-title {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.join,
+.sign-up {
+    .primary-uppercase-title {
+        color: getColor('white');
+        margin-bottom: 20px;
+    }
+}
+
+/* Social-networks */
+
+.flex-list.social-networks {
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-network {
+    @include flexContainer(center, center);
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    fill: getColor('icons-primary');
+
+    transition: fill 250ms $primary-transition-timing-function,
+        background-color 250ms $primary-transition-timing-function;
+}
+
+.social-network-icon {
+    fill: inherit;
+
+    width: 20px;
+    height: 20px;
+}
+
+.social-networks,
+.join {
+    .social-network {
+
+        &:hover,
+        &:focus {
+            background-color: getColor('accent');
+            fill: getColor('white');
+        }
+    }
+}
