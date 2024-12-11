@@ -1,0 +1,110 @@
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  z-index: 1020;
+
+  &.is-open {
+    .icon-cross {
+      display: block;
+    }
+
+    .icon-menu {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .icon-menu,
+    .icon-cross {
+      fill: getColor('accent');
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.icon-menu,
+.icon-cross {
+  fill: getColor('title');
+}
+
+.icon-cross {
+  display: none;
+}
+
+.menu-container {
+  @media (max-width: calc($tablet - 1px)) {
+    display: none;
+
+    overflow-y: scroll;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 796px;
+
+    background-color: getColor('white');
+
+    padding: 48px 40px;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    @include flexContainer(center, space-between);
+    gap: 90px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 310px;
+  }
+}
+
+.menu-social-networks {
+  @include list(flex);
+  gap: 10px;
+  margin-top: 64px;
+  flex-wrap: wrap;
+
+  .network {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 122%;
+
+    a {
+      color: getColor('accent');
+    }
+
+    &:hover,
+    &:focus {
+      a {
+        color: getColor('primary-text');
+      }
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+      height: 100%;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      margin-left: 10px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+@mixin flexContainer($vertical-align: center,
+        $horizontal-align: flex-start){
+
+    display: flex;
+    align-items: $vertical-align;
+    justify-content: $horizontal-align;
+}
+
+@mixin list($type: block){
+    list-style: none;
+
+    display: $type;
+
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin calcFlexBasis($num-of-margins-in-row, 
+$margin-value, $num-of-elements-in-row){
+    flex-basis: calc((100% - $num-of-margins-in-row * 
+    $margin-value) / $num-of-elements-in-row);
+}

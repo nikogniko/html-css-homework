@@ -1,0 +1,126 @@
+/* Header */
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  background-color: getColor('white');
+  border-bottom: 1px solid #ececec;
+
+  z-index: 999;
+
+  > .container {
+    min-height: 60px;
+    @include flexContainer(center, space-between);
+
+    margin-bottom: 0;
+  }
+
+  @media (max-width: calc($tablet - 1px)) {
+    .flex-list {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}
+
+.header-contacts {
+  @media (max-width: calc($tablet - 1px)) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+
+    font-size: 24px;
+
+    .contacts:last-child {
+      font-size: 34px;
+      color: getColor('accent');
+    }
+  }
+
+  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    font-size: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: auto;
+
+    .contacts:last-child {
+      margin-left: 50px;
+    }
+  }
+}
+
+/* Site nav */
+
+.nav-list-item {
+  transition: color 250ms $primary-transition-timing-function;
+
+  @media (max-width: calc($tablet - 1px)) {
+    font-size: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    position: relative;
+    display: block;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+}
+
+.nav-list-item.current::after {
+  @media (min-width: $tablet) {
+    content: '';
+
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: getColor('accent');
+
+    border: 1px solid getColor('accent');
+    border-radius: 5px;
+
+    animation: currentPage 250ms $primary-transition-timing-function;
+  }
+}
+
+.nav-link {
+  color: getColor('title');
+
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.nav-list-item {
+  &.current,
+  &:hover {
+    .nav-link {
+      color: getColor('accent');
+    }
+  }
+}
