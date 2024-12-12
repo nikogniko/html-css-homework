@@ -3,7 +3,7 @@
 .container.portfolio {
   margin-top: 60px;
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     margin-top: 94px;
   }
 }
@@ -12,42 +12,45 @@
   row-gap: 8px;
   column-gap: 15px;
 
-  @media (max-width: $tablet) {
+  @media screen and (max-width: $tablet) {
     flex-wrap: wrap;
 
     margin-bottom: 40px;
   }
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     justify-content: center;
 
     margin-bottom: 30px;
   }
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     margin-bottom: 50px;
   }
 }
 
 .flex-card {
   .portfolio-item-link {
-    display: block;
     color: getColor('primary-text');
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   width: 100%;
 
-  @media (max-width: calc($tablet - 1px)) {
+  @media screen and (max-width: calc($tablet - 1px)) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     @include calcFlexBasis(1, 30px, 2);
   }
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     @include calcFlexBasis(2, 30px, 3);
   }
 
@@ -103,6 +106,7 @@
 
 .flex-card-description {
   padding: 20px 24px;
+  flex-grow: 2;
 
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
@@ -116,6 +120,12 @@
   letter-spacing: 0.06em;
 
   margin-bottom: 4px;
+
+  // якщо реалізовувати це, то на клас картки треба навішати max-width
+  // text-overflow: ellipsis; // обрізання довгих блоків з текстом + трикрапка
+  // overflow: hidden; // приховати текст, що виходить за межі блоку
+  // width: 100%; // ширина блоку з текстом
+  // white-space: nowrap; // заборона на перенесення тексту
 }
 
 .portfolio-item-type {

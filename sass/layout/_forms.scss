@@ -21,7 +21,7 @@ body.modal-open {
 
   transition: opacity 250ms $primary-transition-timing-function;
 
-  @media (max-width: calc($mobile - 1px)) {
+  @media screen and (max-width: calc($mobile - 1px)) {
     padding: 15px;
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@ body.modal-open {
   opacity: 0;
   pointer-events: none;
 
-  @media (min-width: $mobile) {
+  @media screen and (min-width: $mobile) {
     .modal {
       transform: translate(-50%, -50%) scale(0.8);
     }
@@ -43,7 +43,7 @@ body.modal-open {
 .modal {
   min-height: 550px;
 
-  @media (max-width: calc($mobile - 1px)) {
+  @media screen and (max-width: calc($mobile - 1px)) {
     width: calc(100% - 30px);
     // padding-left: 15px;
     // padding-right: 15px;
@@ -51,11 +51,11 @@ body.modal-open {
     align-self: center;
   }
 
-  @media (min-width: $mobile) {
+  @media screen and (min-width: $mobile) {
     width: 450px;
   }
 
-  @media (min-width: $mobile) {
+  @media screen and (min-width: $mobile) {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -65,7 +65,7 @@ body.modal-open {
     transition: transform 250ms $primary-transition-timing-function;
   }
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     width: 528px;
   }
 
@@ -123,7 +123,7 @@ body.modal-open {
 
   color: getColor('title');
 
-  @media (max-width: calc($desktop - 1px)) {
+  @media screen and (max-width: calc($desktop - 1px)) {
     line-height: 150%;
   }
 }
@@ -194,7 +194,7 @@ body.modal-open {
   margin-top: 20px;
   margin-bottom: 30px;
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     margin-left: 12px;
     margin-right: 12px;
   }
@@ -212,7 +212,7 @@ body.modal-open {
     color: getColor('accent');
   }
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     font-size: 14px;
     line-height: 171%;
   }
@@ -223,7 +223,7 @@ body.modal-open {
   left: 0;
   top: 0;
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     top: 15%;
   }
 
@@ -256,7 +256,7 @@ body.modal-open {
 .sign-up {
   width: 100%;
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     width: 570px;
   }
 }
@@ -266,22 +266,22 @@ body.modal-open {
   width: 100%;
   gap: 12px;
 
-  @media (max-width: calc($desktop - 1px)) {
+  @media screen and (max-width: calc($desktop - 1px)) {
     flex-direction: column;
     gap: 20px;
   }
 }
 
 .email-input {
-  @media (max-width: calc($mobile - 1px)) {
+  @media screen and (max-width: calc($mobile - 1px)) {
     width: 100%;
   }
 
-  @media (min-width: $mobile) and (max-width: calc($desktop - 1px)) {
+  @media screen and (min-width: $mobile) and (max-width: calc($desktop - 1px)) {
     width: 450px;
   }
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     width: 358px;
   }
 

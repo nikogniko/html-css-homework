@@ -19,7 +19,7 @@
 }
 
 .hero .primary-button {
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     min-width: 216px;
   }
 }

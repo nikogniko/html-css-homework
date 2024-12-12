@@ -25,7 +25,7 @@
     }
   }
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
@@ -40,7 +40,7 @@
 }
 
 .menu-container {
-  @media (max-width: calc($tablet - 1px)) {
+  @media screen and (max-width: calc($tablet - 1px)) {
     display: none;
 
     overflow-y: scroll;
@@ -64,12 +64,12 @@
     }
   }
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     @include flexContainer(center, space-between);
     gap: 90px;
   }
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     gap: 310px;
   }
 }
@@ -104,7 +104,7 @@
     }
   }
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }

@@ -29,7 +29,7 @@ img {
   font-size: 26px;
   letter-spacing: 0.03em;
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     font-size: 26px;
   }
 }
@@ -58,7 +58,7 @@ img {
   margin-right: 10px;
   margin-top: -2px;
 
-  @media (max-width: calc($tablet - 1px)) {
+  @media screen and (max-width: calc($tablet - 1px)) {
     display: none;
   }
 }
@@ -72,7 +72,7 @@ img {
 
   margin-bottom: 30px;
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     font-size: 36px;
 
     margin-bottom: 50px;
@@ -102,7 +102,7 @@ img {
   .features,
   &.team .primary-list,
   .cards {
-    @media (min-width: $tablet) {
+    @media screen and (min-width: $tablet) {
       display: flex;
 
       flex-wrap: wrap;
@@ -110,17 +110,17 @@ img {
     }
   }
 
-  @media (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     max-width: $tablet;
   }
 
-  @media (max-width: calc($desktop - 1px)) {
+  @media screen and (max-width: calc($desktop - 1px)) {
     &.specialization {
       display: none;
     }
   }
 
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
     max-width: $desktop;
     margin-bottom: 94px;
 
